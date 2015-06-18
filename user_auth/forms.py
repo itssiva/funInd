@@ -38,7 +38,7 @@ class SignUpForm(forms.ModelForm):
 
     class Meta:
         model = User
-
+        include = ['email']
         exclude = ['last_login', 'date_joined']
 
     def __init__(self, *args, **kwargs):
