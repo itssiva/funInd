@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', 'user_auth.views.reset_confirm', name='password_reset_confirm'),
     url(r'^success/$', 'user_auth.views.success', name='success'),
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', 'user_auth.views.activate_account', name='activate'),
-    url(r'^profile/(?P<username>[0-9A-Za-z_\-]+)', 'user_auth.views.profile','profile')
-
-
+    url(r'^profile/(?P<username>[0-9A-Za-z_\-]+)/$', 'user_auth.views.profile', name='profile'),
+    url(r'^about/$', 'user_auth.views.about', name='about'),
+    url(r'^support/$', 'user_auth.views.support', name='support'),
 ]

@@ -40,7 +40,7 @@ def signup(request):
 
 def signin(request):
     if request.user.is_authenticated():
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect('/home')
     else:
         if request.method == 'POST':
             username = request.POST['username']
@@ -121,5 +121,13 @@ def activate_account(request, uidb64=None, token=None):
     return HttpResponseRedirect('/signin')
 
 
+def profile(request, username):
+    if request.user.username == username:
+        return render_to_response('profile.html',{'user':request.user})
 
 
+def about(request):
+    return render_to_response('about.html')
+
+def support(request):
+    return render_to_response('support.html')

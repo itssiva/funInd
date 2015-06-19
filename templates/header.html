@@ -13,12 +13,12 @@
             <div class="collapse navbar-collapse" id="header-menu">
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'signup' %}"> Blog</a> </li>
-                    <li><a href="{% url 'signup' %}"> About</a> </li>
-                    <li><a href="{% url 'signup' %}"> Support</a> </li>
+                    <li><a href="{% url 'about' %}"> About</a> </li>
+                    <li><a href="{% url 'support' %}"> Support</a> </li>
                 </ul>
                 {% if user.is_authenticated %}
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{% url 'signup' %}">{{ user.profile.get_screen_name }}</a></li>
+                    <li><a href="/profile/{{ user.username }}">{{ user.username }}</a></li>
                     <li><a href="{% url 'signin' %}" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Account settings"><span class="glyphicon glyphicon-cog"></span></a></li>
                     <li><a href="{% url 'signout' %}" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Log out"><span class="glyphicon glyphicon-log-out"></span></a></li>
                 </ul>
