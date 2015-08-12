@@ -117,6 +117,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'sivaponugoti@gmail.com'
-EMAIL_HOST_PASSWORD = 'vrnmSn#6'
+EMAIL_HOST_PASSWORD = '********'
 DEFAULT_FROM_EMAIL = 'sivaponugoti@gmail.com'
 DEFAULT_TO_EMAIL = 'sivaponugoti@gmail.com'
